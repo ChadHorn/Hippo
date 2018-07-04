@@ -49,19 +49,19 @@ RewriteRule ^ index.php [L]
 #### Steps for Setup
 - Create directory to serve website on Apache.
 - Setup Apache to serve specific website. See also "Apache Specific Setup" above.
--- You may need to update the `/etc/hosts` file to reflect proper DNS pointing/overriding depending upon your system.
+- - You may need to update the `/etc/hosts` file to reflect proper DNS pointing/overriding depending upon your system.
 - CD into the newly created directory.
 - Clone *this* git repository into created folder: bash > `git clone  https://github.com/ChadHorn/Hippo.git ./`
 - While remaining in the directory, run the following command: bash > `cp .env.example .env`
 - Open the .env file and update the `APP_URL` with the appropriate URL.
 - While still in the home directory, update composer: bash > `composer update`
--- If an error is received, run: bash > `composer install` instead.
--- If you receive yet another error, run: bash > `php composer.phar install`
+- - If an error is received, run: bash > `composer install` instead.
+- - If you receive yet another error, run: bash > `php composer.phar install`
 -or-
 bash > `php composer.phar update`
 - While still in the home directory, update npm:
 bash > `npm update`
--- If an error is received, run
+- - If an error is received, run
 bash > `npm install` instead.
 - Create a new database using either a GUI or the following code in MySQL terminal prompt:
 mysql > `CREATE DATABASE hippotest;`
@@ -71,7 +71,7 @@ mysql > `CREATE USER 'hippotest'@'localhost' IDENTIFIED BY 'abc123';`
 mysql > `GRANT ALL PRIVILEGES ON hippotest.* TO 'hippotest'@'localhost' WITH GRANT OPTION;`
 - Leave the MySQL prompt and using artisan, build the databases by using the following command:
 bash > `php artisan migrate:install`
--- Note: If you want to clear the tables and fresh install the schema, run the following command:
+- - Note: If you want to clear the tables and fresh install the schema, run the following command:
 bash > `php artisan migrate:fresh`
 
 Note: Due to various nuances between the flavors of Linux, slight modifications to the above steps may be required. These steps are based upon a Mac LEMP environment, in addition to a Debian LEMP environment.
