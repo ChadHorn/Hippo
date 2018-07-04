@@ -20,7 +20,7 @@ This is the codebase created per the requirements below. The codebase was comple
 ## Additional Requirements
 In addition to the given environmental variables outlined under the "Additional Considerations" section above, these are additional steps required to get Laravel (and specifically, this application) running on an external environment.
 
-There is a basic assumption that whoever is reviewing this will be able to handle the somewhat basic technical specifics of upgrades and installations as required. If a more indepth installation guide is requested, one can be supplied with a given notice.
+There is a basic assumption that whoever is reviewing this will be able to handle the somewhat basic technical specifics of upgrades and installations as required. If a more in depth installation guide is requested, one can be supplied with a given notice.
 
 #### Minimum Server Requirements (in addition or different than those given)
 - PHP >= 7.1.3
@@ -33,6 +33,9 @@ There is a basic assumption that whoever is reviewing this will be able to handl
 - JSON PHP Extension
 - Git Installed
 - Node Installed
+- Composer Installed
+
+Quick Reference for Ubuntu: bash > `sudo apt-get install php7.2-curl php7.2-xml php7.2-zip php7.2-gd php7.2-mysql php7.2-mbstring php7.2-fpm composer`
 
 #### Apache Specific Setup
 Laravel includes a public/.htaccess file that is used to provide URLs without the index.php front controller in the path. Before serving Laravel with Apache, be sure to enable the mod_rewrite module so the .htaccess file will be honored by the server.
@@ -54,15 +57,15 @@ RewriteRule ^ index.php [L]
 - Clone *this* git repository into created folder: bash > `git clone  https://github.com/ChadHorn/Hippo.git ./`
 - While remaining in the directory, run the following command: bash > `cp .env.example .env`
 - Open the .env file and update the `APP_URL` with the appropriate URL.
-- While still in the home directory, update composer: bash > `composer update`
-- - If an error is received, run: bash > `composer install` instead.
+- While still in the home directory, update composer: bash > `composer install`
+- - If an error is received, run: bash > `composer update` instead.
 - - If you receive yet another error, run: bash > `php composer.phar install`
 -or-
 bash > `php composer.phar update`
 - While still in the home directory, update npm:
-bash > `npm update`
+bash > `npm install`
 - - If an error is received, run
-bash > `npm install` instead.
+bash > `npm update` instead.
 - Create a new database using either a GUI or the following code in MySQL terminal prompt:
 mysql > `CREATE DATABASE hippotest;`
 - Create a new MySQL user account:
@@ -74,7 +77,7 @@ bash > `php artisan migrate:install`
 - - Note: If you want to clear the tables and fresh install the schema, run the following command:
 bash > `php artisan migrate:fresh`
 
-Note: Due to various nuances between the flavors of Linux, slight modifications to the above steps may be required. These steps are based upon a Mac LEMP environment, in addition to a Debian LEMP environment.
+Note: Due to various nuances between the flavors of Linux, slight modifications to the above steps may be required. These steps are based upon a Mac LEMP environment, in addition to a Ubuntu LEMP environment.
 
 #### How to Use
 - Upon completion of the above steps, visit the URL that you created created during the Apache setup and click on "Register" at the top of the page. This will allow you to register a Veterinarian account.
