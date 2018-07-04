@@ -1,8 +1,6 @@
 # Hippo Software Technical Assessment
 This is the codebase created per the requirements below. The codebase was completed as close to the original rough outline as possible and no creative liberty was exercised. Also, to avoid scope creep, I have no taken the developmental freedom to make UI/UX changes that I would have otherwise suggested or implemented (see below section labeled "Suggested Implementations Not Completed Due to Self-Imposed Scope Limitations").
 
-[TOCM]
-
 ## Given Requirements
 - [x] There must be a way for a user to log in with an e-mail address/password combination. These users will be the veterinarians.
 - [x] There must be a way for a veterinarian to create a new account with their e-mail address/password combination.
@@ -53,33 +51,28 @@ RewriteRule ^ index.php [L]
 - Setup Apache to serve specific website. See also "Apache Specific Setup" above.
 -- You may need to update the `/etc/hosts` file to reflect proper DNS pointing/overriding depending upon your system.
 - CD into the newly created directory.
-- Clone *this* git repository into created folder:
-**bash > **`git clone  https://github.com/ChadHorn/Hippo.git ./`
-- While remaining in the directory, run the following command:
-**bash > **`cp .env.example .env`
+- Clone *this* git repository into created folder: bash > `git clone  https://github.com/ChadHorn/Hippo.git ./`
+- While remaining in the directory, run the following command: bash > `cp .env.example .env`
 - Open the .env file and update the `APP_URL` with the appropriate URL.
-- While still in the home directory, update composer:
-**bash > **`composer update`
--- If an error is received, run:
-**bash > **`composer install` instead.
--- If you receive yet another error, run:
-**bash > **`php composer.phar install`
+- While still in the home directory, update composer: bash > `composer update`
+-- If an error is received, run: bash > `composer install` instead.
+-- If you receive yet another error, run: bash > `php composer.phar install`
 -or-
-**bash > **`php composer.phar update`
+bash > `php composer.phar update`
 - While still in the home directory, update npm:
-**bash > **`npm update`
+bash > `npm update`
 -- If an error is received, run
-**bash > **`npm install` instead.
+bash > `npm install` instead.
 - Create a new database using either a GUI or the following code in MySQL terminal prompt:
-**mysql > **`CREATE DATABASE hippotest;`
+mysql > `CREATE DATABASE hippotest;`
 - Create a new MySQL user account:
-**mysql > **`CREATE USER 'hippotest'@'localhost' IDENTIFIED BY 'abc123';`
+mysql > `CREATE USER 'hippotest'@'localhost' IDENTIFIED BY 'abc123';`
 - Grant appropriate privileges to user to database:
-**mysql > **`GRANT ALL PRIVILEGES ON hippotest.* TO 'hippotest'@'localhost' WITH GRANT OPTION;`
+mysql > `GRANT ALL PRIVILEGES ON hippotest.* TO 'hippotest'@'localhost' WITH GRANT OPTION;`
 - Leave the MySQL prompt and using artisan, build the databases by using the following command:
-**bash > **`php artisan migrate:install`
+bash > `php artisan migrate:install`
 -- Note: If you want to clear the tables and fresh install the schema, run the following command:
-**bash > **`php artisan migrate:fresh`
+bash > `php artisan migrate:fresh`
 
 Note: Due to various nuances between the flavors of Linux, slight modifications to the above steps may be required. These steps are based upon a Mac LEMP environment, in addition to a Debian LEMP environment.
 
@@ -98,5 +91,7 @@ Note: Due to various nuances between the flavors of Linux, slight modifications 
 - [ ] Limit administration functionality by each veterinarian.
 - [ ] Dashboard on landing page with pertinent insights and/or shortcuts.
 - [ ] Place code into production mode prior to deployment. It's currently in local/debug mode to display any in a given environment.
+
+
 
 *If you need anything else, please let me know and I'll do my best to accommodate your request(s).*
