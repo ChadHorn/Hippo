@@ -125,8 +125,9 @@ return [
     */
 
     'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
+        'phone' => [
+            'required' => 'The phone number is required.',
+            'invalid' => 'The phone number format is invalid.',
         ],
     ],
 
