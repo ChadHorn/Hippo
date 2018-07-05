@@ -86,6 +86,7 @@ Note: Due to various nuances between the flavors of Linux, slight modifications 
 - Note: To delete a record, go into the records' edit page and click on the "Delete" button at the bottom.
 
 ## Suggested Implementations Not Completed Due to Self-Imposed Scope Limitations
+- [ ] Compete testing; TDD from beginning to end during development (hence, TDD)
 - [ ] Have ability to add owner on the fly within the patient dropdown.
 - [ ] Utilize Nginx vs Apache due to the threading capacity when utilizing PHP.
 - [ ] Require email verification for new accounts.
