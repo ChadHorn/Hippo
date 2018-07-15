@@ -21,9 +21,9 @@
                     <table class="table table-light">
                       <thead>
                         <tr>
-                          <th scope="col">First Name</th>
-                          <th scope="col">Last Name</th>
-                          <th scope="col">Phone Number</th>
+                          <th scope="col">ID</th>
+                          <th scope="col">Practice Name</th>
+                          <th scope="col">Email</th>
                         </tr>
                       </thead>
                       <tbody>
