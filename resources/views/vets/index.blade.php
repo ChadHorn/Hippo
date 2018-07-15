@@ -21,9 +21,8 @@
                     <table class="table table-light">
                       <thead>
                         <tr>
-                          <th scope="col">First Name</th>
-                          <th scope="col">Last Name</th>
-                          <th scope="col">Phone Number</th>
+                          <th scope="col">ID</th>
+                          <th scope="col">EMail</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -31,7 +30,6 @@
                             @foreach($vets AS $vet)
                                 <tr data-url="/vets/{{ $vet->id }}">
                                   <td>{{ $vet->id }}</td>
-                                  <td>{{ $vet->name }}</td>
                                   <td>{{ $vet->email }}</td>
                                 </tr>
                             @endforeach

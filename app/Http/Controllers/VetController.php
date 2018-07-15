@@ -40,7 +40,6 @@ class VetController extends Controller {
     public function store(VetForm $request) {
         //
         $vet = Vet::create([
-            'name' => $request['name'],
             'email' => $request['email'],
             'password' => Hash::make($request['password']),
         ]);
@@ -80,7 +79,6 @@ class VetController extends Controller {
         //
         $vet = Vet::find($id);
 
-        $vet->name = $request->name;
         $vet->email = $request->email;
         $vet->password = Hash::make($request->password);
 

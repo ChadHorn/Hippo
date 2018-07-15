@@ -20,14 +20,6 @@
 
                 <div class="card-body">
                     <div class="form-group row">
-                        <label for="name" class="col-md-4 text-md-right">{{ __('Name') }}</label>
-
-                        <div class="col-md-6">
-                            {{ $vet->name }}
-                        </div>
-                    </div>
-
-                    <div class="form-group row">
                         <label for="name" class="col-md-4 text-md-right">{{ __('Email') }}</label>
 
                         <div class="col-md-6">
