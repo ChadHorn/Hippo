@@ -1,5 +1,5 @@
 # Hippo Software Technical Assessment
-This is the codebase created per the requirements below. The codebase was completed as close to the original rough outline as possible and no creative liberty was exercised. Also, to avoid scope creep, I have no taken the developmental freedom to make UI/UX changes that I would have otherwise suggested or implemented (see below section labeled "Suggested Implementations Not Completed Due to Self-Imposed Scope Limitations").
+This is the codebase created per the requirements below. The codebase was completed as close to the original rough outline as possible and no creative liberty was exercised. Also, to avoid scope creep, I have _not_ taken the developmental freedom to make UI/UX changes that I would have otherwise suggested or implemented (see below section labeled "Suggested Implementations Not Completed Due to Self-Imposed Scope Limitations").
 
 ## Given Requirements
 - [x] There must be a way for a user to log in with an e-mail address/password combination. These users will be the veterinarians.
