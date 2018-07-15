@@ -73,7 +73,7 @@ mysql > `CREATE USER 'hippotest'@'localhost' IDENTIFIED BY 'abc123';`
 - Grant appropriate privileges to user to database:
 mysql > `GRANT ALL PRIVILEGES ON hippotest.* TO 'hippotest'@'localhost' WITH GRANT OPTION;`
 - Leave the MySQL prompt and using artisan, build the databases by using the following command:
-bash > `php artisan migrate:install`
+bash > `php artisan migrate:install` and then bash > `php artisan migrate:refresh`.
 - - Note: If you want to clear the tables and fresh install the schema, run the following command:
 bash > `php artisan migrate:fresh`
 
@@ -86,6 +86,7 @@ Note: Due to various nuances between the flavors of Linux, slight modifications 
 - Note: To delete a record, go into the records' edit page and click on the "Delete" button at the bottom.
 
 ## Suggested Implementations Not Completed Due to Self-Imposed Scope Limitations
+- [ ] Compete testing; TDD from beginning to end during development (hence, TDD)
 - [ ] Have ability to add owner on the fly within the patient dropdown.
 - [ ] Utilize Nginx vs Apache due to the threading capacity when utilizing PHP.
 - [ ] Require email verification for new accounts.
@@ -98,3 +99,5 @@ Note: Due to various nuances between the flavors of Linux, slight modifications 
 
 
 *If you need anything else, please let me know and I'll do my best to accommodate your request(s).*
+
+To view a live version of this application, you may go to: https://hippo.chadhorn.com/. Feel free to create as many accounts as you wish or login with the default credentials of "acme@pets.com" as the username and "abc123" as the password.
