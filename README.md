@@ -99,3 +99,5 @@ Note: Due to various nuances between the flavors of Linux, slight modifications 
 
 
 *If you need anything else, please let me know and I'll do my best to accommodate your request(s).*
+
+To view a live version of this application, you may go to: https://hippo.chadhorn.com/. Feel free to create as many accounts as you wish or login with the default credentials of "acme@pets.com" as the username and "abc123" as the password.
