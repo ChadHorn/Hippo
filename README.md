@@ -73,7 +73,7 @@ mysql > `CREATE USER 'hippotest'@'localhost' IDENTIFIED BY 'abc123';`
 - Grant appropriate privileges to user to database:
 mysql > `GRANT ALL PRIVILEGES ON hippotest.* TO 'hippotest'@'localhost' WITH GRANT OPTION;`
 - Leave the MySQL prompt and using artisan, build the databases by using the following command:
-bash > `php artisan migrate:install`
+bash > `php artisan migrate:install` and then bash > `php artisan migrate:refresh`.
 - - Note: If you want to clear the tables and fresh install the schema, run the following command:
 bash > `php artisan migrate:fresh`
 
